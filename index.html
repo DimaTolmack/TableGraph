@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap"
+          rel="stylesheet">
+    <title>Table</title>
+</head>
+<body>
+<div class="container">
+    <div class="table">
+        <div class="table__item">
+            <div class="item-wrapper">
+                <div class="item item-md-head">
+                    Показатель
+                </div>
+                <div class="item item-current-day-head">
+                    Текущий день
+                </div>
+                <div class=" item item-yesterday-head">
+                    Вчера
+                </div>
+                <div class=" item item-week-head">
+                    Этот день недели
+                </div>
+            </div>
+        </div>
+        <div class="table__item">
+            <div class="item-wrapper">
+                <div class="item item-md">
+                    Выручка руб.
+                </div>
+                <div class="item item-current-day">
+                    500 521
+                </div>
+                <div class=" item item-yesterday">
+                    480 521 <span class="color-green"> 4%</span>
+                </div>
+                <div class="item item-week red">
+                    4 805 121
+                </div>
+            </div>
+            <div class="chart">
+                <div class="line-chart">
+                    <canvas id="revenue"></canvas>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="table__item">
+            <div class="item-wrapper">
+                <div class="item item-md">
+                    Наличные
+                </div>
+                <div class="item item-current-day">
+                    300 000
+                </div>
+                <div class=" item item-yesterday">
+                    300 000 <span class="color-green"> 0%</span>
+                </div>
+                <div class=" item item-week">
+                    300 000
+                </div>
+            </div>
+            <div class="chart">
+                <div class="line-chart">
+                    <canvas id="cash"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="table__item">
+            <div class="item-wrapper">
+                <div class="item item-md">
+                    Безналичный расчет
+                </div>
+                <div class="item item-current-day">
+                    100 000
+                </div>
+                <div class=" item item-yesterday">
+                    100 000 <span class="color-green"> 0%</span>
+                </div>
+                <div class=" item item-week">
+                    100 000
+                </div>
+            </div>
+            <div class="chart">
+                <div class="line-chart">
+                    <canvas id="noCash"></canvas>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="table__item">
+            <div class="item-wrapper">
+                <div class="item item-md">
+                    Кредитные карты
+                </div>
+                <div class="item item-current-day">
+                    100 521
+                </div>
+                <div class=" item item-yesterday">
+                    100 521 <span class="color-green"> 0%</span>
+                </div>
+                <div class=" item item-week">
+                    100 521
+                </div>
+            </div>
+            <div class="chart">
+                <div class="line-chart">
+                    <canvas id="card"></canvas>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="table__item">
+            <div class="item-wrapper">
+                <div class="item item-md">
+                    Средний чек. руб
+                </div>
+                <div class="item item-current-day">
+                    1 300
+                </div>
+                <div class=" item item-yesterday">
+                    900 <span class="color-green"> 44%</span>
+                </div>
+                <div class=" item item-week">
+                    900
+                </div>
+            </div>
+            <div class="chart">
+                <div class="line-chart">
+                    <canvas id="check"></canvas>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="table__item">
+            <div class="item-wrapper">
+                <div class="item item-md">
+                    Средний гость. руб
+                </div>
+                <div class="item item-current-day">
+                    1 200
+                </div>
+                <div class=" item item-yesterday">
+                    800 <span class="color-green"> 50%</span>
+                </div>
+                <div class=" item item-week">
+                    800
+                </div>
+            </div>
+            <div class="chart">
+                <div class="line-chart">
+                    <canvas id="guest"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="table__item">
+            <div class="item-wrapper">
+                <div class="item item-md">
+                    Удаление из чека(после оплаты).руб
+                </div>
+                <div class="item item-current-day">
+                    1000
+                </div>
+                <div class=" item item-yesterday red">
+                    1 100 <span class="color-red"> -9%</span>
+                </div>
+                <div class=" item item-week">
+                    900
+                </div>
+            </div>
+            <div class="chart">
+                <div class="line-chart">
+                    <canvas id="after_payment"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="table__item">
+            <div class="item-wrapper">
+                <div class="item item-md">
+                    Удаление из чека(до оплаты). руб
+                </div>
+                <div class="item item-current-day">
+                    1 300
+                </div>
+                <div class=" item item-yesterday">
+                    1 300 <span class="color-green"> 0%</span>
+                </div>
+                <div class=" item item-week">
+                    900
+                </div>
+            </div>
+            <div class="chart">
+                <div class="line-chart">
+                    <canvas id="before_payment"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="table__item">
+            <div class="item-wrapper">
+                <div class="item item-md">
+                    Количество чеков
+                </div>
+                <div class="item item-current-day">
+                    34
+                </div>
+                <div class=" item item-yesterday red">
+                    36 <span class="color-red"> -6%</span>
+                </div>
+                <div class=" item item-week">
+                    34
+                </div>
+            </div>
+            <div class="chart">
+                <div class="line-chart">
+                    <canvas id="count_check"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="table__item">
+            <div class="item-wrapper">
+                <div class="item item-md">
+                    Количество гостей
+                </div>
+                <div class="item item-current-day">
+                    34
+                </div>
+                <div class=" item item-yesterday red">
+                    36 <span class="color-red"> -6%</span>
+                </div>
+                <div class=" item item-week">
+                    32
+                </div>
+            </div>
+            <div class="chart">
+                <div class="line-chart">
+                    <canvas id="count_guest"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="./JavaScript/Accordion.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="text/javascript" src="./JavaScript/Chart.js"></script>
+</body>
+</html>

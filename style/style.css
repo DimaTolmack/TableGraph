@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+}
+.container .table {
+  margin-top: 50px;
+  max-width: 900px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-left: 5px solid #f5f5f5;
+  border-right: 5px solid #f5f5f5;
+  padding: 0 15px;
+}
+.container .table .table__item .item-wrapper {
+  display: grid;
+  grid-template-columns: 350px 1fr 1fr 1fr;
+  gap: 5px;
+  text-align: center;
+  font-size: 18px;
+}
+.container .table .table__item .item-wrapper .item {
+  background-color: #f5f5f5;
+  padding: 10px 5px 10px 5px;
+}
+.container .table .table__item .item-wrapper .item-md {
+  text-align: start;
+}
+.container .table .table__item .item-wrapper .item-current-day {
+  background-color: #edf8ff;
+}
+.container .table .table__item .item-wrapper .item-yesterday {
+  display: grid;
+  grid-template-columns: 70% 1fr;
+}
+.container .table .table__item .item-wrapper .red {
+  background-color: #fe928e;
+}
+.container .table .table__item .item-wrapper .color-green {
+  color: green;
+}
+.container .table .table__item .item-wrapper .color-red {
+  color: red;
+  text-align: end;
+}
+.container .table .table__item .chart {
+  overflow: hidden;
+  width: 100%;
+  max-height: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
